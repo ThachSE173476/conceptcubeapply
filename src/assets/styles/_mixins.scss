@@ -1,0 +1,4 @@
+@mixin d-flex($gap) {
+    display: flex;
+    gap: $gap;
+}

@@ -1,0 +1,29 @@
+@use '../../assets/styles/' as *;
+
+.data {
+    padding: 20px;
+    width: 280px;
+    max-height: 260px;
+    border-radius: 10px;
+    border: 1px solid $grey-color-1;
+    
+    &-title {
+        text-align: center;
+        font-weight: 700;
+        font-size: $font-20;
+        margin-bottom: 12px;
+    }
+    &-img {
+        text-align: center;
+        img {
+            width: 240px;
+            height: 160px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+}

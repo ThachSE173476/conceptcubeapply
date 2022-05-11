@@ -1,0 +1,16 @@
+@use '../../assets/styles/' as *;
+
+.data-list {
+    &__head {
+        font-size: 54px;
+        text-align: center;
+        margin: 100px 0;
+    }
+    &__wrapper {
+        padding: 0 30px;
+        display: flex;
+        justify-content: center;
+        @include d-flex(20px);
+        flex-wrap: wrap;
+    }
+}
