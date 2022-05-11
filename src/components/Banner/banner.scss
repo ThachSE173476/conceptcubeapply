@@ -1,0 +1,171 @@
+@use '../../assets/styles/' as *;
+
+.banner {
+    max-width: 1920px;
+    width: auto;
+    margin: 50px 0 70px;
+    padding: 58px 166px 60px 77px;
+    background-color: #efefef;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-left {
+        h1 {
+            margin: 2px 0 14px;
+            font-size: 18px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: 1.8px;
+            text-align: left;
+            color: #292929;
+            text-transform: uppercase;
+        }
+        p {
+            width: 360px;
+            margin: 4px 0 50px 1px;
+            font-size: 35px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #070707;
+        }
+        button {
+            width: 162px;
+            height: 40px;
+            margin: 35px 0 0 3px;
+            padding: 15px 43px;
+            background-color: #070707;
+            color: #fff;
+            font-size: 12px;
+            line-height: 0;
+        }
+    }
+    &-middle {
+        height: fit-content;
+        position: relative;
+        &--bg {
+            width: 526px;
+            height: 298.5px;
+            object-fit: cover;
+        }
+        span {
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            z-index: 1;
+            padding: 9px 14px 7px;
+            background-color: #ff2e43;
+            color: #fff;
+        }
+        &--play {
+            width: 81px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        h5 {
+            padding: 8px 11px 7px;
+            background-color: #000;
+            color: #f7f7f7;
+            width: fit-content;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+    }
+    &-right {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        &__item {
+            display: flex;
+            gap: 20px;
+            img {
+                width: 157px;
+                height: 89px;
+            }
+            &--wrap {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h1 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #070707;
+                }
+                p {
+                    max-width: 272px;
+                    font-size: 12px;
+                    font-weight: 300;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.25;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #070707;
+                    word-wrap: break-word;
+                }
+
+            }
+        }
+        &__icons {
+            display: flex;
+            gap: 15px;
+            &--wrap {
+                font-size: 12px;
+                font-weight: 300;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.46;
+                i {
+                    font-size: 14px;
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1600px) {
+    .banner {
+        &-right {
+            margin-top: 32px;
+            flex-direction: row;
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        &-middle {
+            width: fit-content;
+        }
+        &-right {
+            margin-top: 32px;
+            flex-direction: row;
+        }
+    }
+}
+@media (max-width: 800px) {
+    .banner {
+        &-right {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

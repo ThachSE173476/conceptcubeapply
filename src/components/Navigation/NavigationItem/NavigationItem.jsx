@@ -1,10 +1,10 @@
 import React from 'react';
 import './navigation-item.scss'
 
-const NavigationItem = () => {
+const NavigationItem = (props) => {
     return (
-        <div>
-            NavigationItem
+        <div className={`navigation-item ${props.focus ? "focus" : ""}`}>
+            <p>{props.text}</p>
         </div>
     );
 }

@@ -1,1 +1,27 @@
 @use '../../../assets/styles/' as *;
+
+.navigation-item {
+    width: 200px;
+    height: 80px;
+    margin: 10px 5px;
+    background-color: #070707;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p { 
+        display: block;
+        max-width: 148px;
+        word-wrap: normal;
+        font-size: 20px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #fff;
+        margin: auto;
+    }
+    &.focus {
+        background-color: $red-color;
+    }
+}

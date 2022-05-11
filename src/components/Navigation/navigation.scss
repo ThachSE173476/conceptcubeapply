@@ -1,1 +1,38 @@
 @use '../../assets/styles/' as *;
+
+.navigation {
+    max-width: 1920px;
+    width: auto;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 60px;
+    &-wrapper {
+        display: flex;
+        width: 2100px;
+        transform: translateX(-100px);
+    }
+    &-btn {
+        width: 44px;
+        height: 44px;
+        border-radius: 100%;
+        background-color: $red-color;        
+        border: none;
+        cursor: pointer;
+        i {
+            font-size: 17px;
+            color: #fff;
+        }
+    }
+    &-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 16px;
+    }
+    &-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+    }
+}
