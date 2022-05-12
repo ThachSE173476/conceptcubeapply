@@ -1,5 +1,36 @@
 @use '../../assets/styles/' as *;
 
 .btn {
-    
+    padding: 13px 40px 13px 38px;   
+    background-color: #070707;
+    min-width: 142px;
+    max-width: max-content;
+    color: #fff;
+    transition: all .2s linear;
+    &:hover {
+        cursor: pointer;
+        color: #070707;
+        background-color: #fff;
+        border: 1px solid #070707;
+    }
+    &-trans {
+        transition: all .2s linear;
+        padding: 13px 40px 13px 38px;   
+        min-width: 142px;
+        max-width: max-content;
+        color: #070707;
+        background-color: #fff;
+        border: 1px solid #070707;
+        transition: all .2s linear;
+        &:hover {
+            cursor: pointer;
+            color: #fff;
+            background-color: #070707;
+            border: 1px solid #070707;
+        }
+        &.width-100 {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
 }

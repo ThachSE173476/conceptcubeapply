@@ -1,9 +1,10 @@
-import React, { Children } from 'react';
+import React from 'react';
+import './button.scss'
 
 const Button = (props) => {
     return (
-        <button className={`btn ${props.trans ? "trans" : ""}`}>
-            {Children}
+        <button className={`${props.trans ? "btn-trans" : "btn"} ${props.width100 ? "width-100" : ""}`}>
+            {props.children}
         </button>
     );
 }
