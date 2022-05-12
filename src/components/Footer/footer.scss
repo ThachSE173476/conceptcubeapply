@@ -1,1 +1,74 @@
 @use '../../assets/styles/' as *; 
+
+.footer {
+    max-width: 1920px;
+    width: auto;
+    margin-top: 72px;
+    &__contact {
+        width: inherit;
+        padding: 12px 30px 11px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #070707;
+        &--wrap {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            h1 {
+                font-size: 14px;
+                font-weight: 500;
+                color: #fff;
+            }
+            h3 {
+                font-size: 12px;
+                font-weight: 200;
+                color: #fff;
+            }
+        }
+        &--icons {
+            display: flex;
+            gap: 15px;
+            i {
+                font-size: 22px;
+                color: #fff;
+            }
+        }
+    }
+
+    &__nav {
+        width: inherit;
+        padding: 12px 30px 11px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &--wrap {
+            display: flex;
+            li {
+                padding: 0 19px;
+                font-family: Montserrat;
+                font-size: 12px;
+                font-weight: 300;
+                position: relative;
+                i {
+                    font-size: 10px;
+                }
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:nth-child(2), &:nth-child(3) {
+                    border-left: 1px solid #efefef;
+                    border-right: 1px solid #efefef;
+                }
+            }
+        }
+        &--logo {
+            img {
+                width: 179px;
+                height: 11px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}

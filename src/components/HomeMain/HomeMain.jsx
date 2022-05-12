@@ -155,6 +155,34 @@ const HomeMain = () => {
         },
     ]
 
+    const imgComponentsFoot = [
+        {
+            img: home4,
+            owner: "Kim Aeyong",
+            userImg: user1
+        },
+        {
+            img: home5,
+            owner: "Kim Jimin",
+            userImg: user2
+        },
+        {
+            img: home1,
+            owner: "Im junghan",
+            userImg: user1
+        },
+        {
+            img: home6,
+            owner: "Cayley",
+            userImg: user1
+        },
+        {
+            img: home7,
+            owner: "Hamilton",
+            userImg: user2
+        },
+    ]
+
     return (
         <div className="home-main">
             <ul className="home-main__filters">
