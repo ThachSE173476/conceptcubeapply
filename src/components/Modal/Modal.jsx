@@ -29,7 +29,7 @@ import photoshop from '../../assets/img/photoshop.png'
 import illustrator from '../../assets/img/illustrator.png'
 
 
-const Modal = () => {
+const Modal = (props) => {
     const listImg = [
         {
             img: home1,
@@ -82,8 +82,10 @@ const Modal = () => {
     ]
 
     return (
-        <div className="modal">
-            <div className="overlay"></div>
+        <div className={`modal ${props.open ? "" : "d-none"}`}>
+            <div className="overlay" onClick={() => {
+                props.setModalOpen(false)
+            }}></div>
             <div className="modal-main">
                 <div className="modal-header">
                     <div className="modal-header__wrap">
@@ -240,7 +242,9 @@ const Modal = () => {
                     </div>
                 </div>
             </div>
-            <div className="modal-close">
+            <div className="modal-close" onClick={() => {
+                props.setModalOpen(false)
+            }}>
                 <i class="fa-solid fa-xmark"></i>
             </div>
             <div className="modal-tools">

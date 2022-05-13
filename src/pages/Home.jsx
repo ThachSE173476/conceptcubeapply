@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from "../components/Header/Header";
 import Navigation from "../components/Navigation/Navigation";
 import HomeMain from "../components/HomeMain/HomeMain";
@@ -7,14 +7,16 @@ import Footer from '../components/Footer/Footer'
 import Modal from '../components/Modal/Modal'
 
 const Home = () => {
+
+    const [open, setOpen] = useState(false)
     return (
         <div>
             <Header/>
             <Navigation/>
-            <HomeMain/>
+            <HomeMain setModalOpen={(bool) => setOpen(bool)}/>
             <Banner/>
             <Footer/>
-            <Modal/>
+            <Modal open={open} setModalOpen={(bool) => setOpen(bool)}/>
         </div>
     );
 }

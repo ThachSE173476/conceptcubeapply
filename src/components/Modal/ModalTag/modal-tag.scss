@@ -22,9 +22,9 @@
 
     }
     &.blue {
-        background-color: #2233ff;
+        background-color: $blue-color;
         &::after {
-            border-top: 20px solid #2233ff;
+            border-top: 20px solid $blue-color;
         }
     }
 }

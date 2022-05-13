@@ -4,7 +4,7 @@
     width: 200px;
     height: 80px;
     margin: 10px 5px;
-    background-color: #070707;
+    background-color: $black-color;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@
         font-style: normal;
         letter-spacing: normal;
         text-align: center;
-        color: #fff;
+        color: $white-color;
         margin: auto;
     }
     &.focus {

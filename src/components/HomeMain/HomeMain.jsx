@@ -23,7 +23,7 @@ import user2 from '../../assets/img/user2.jpg'
 
 import Banner from "../Banner/Banner";
 
-const HomeMain = () => {
+const HomeMain = (props) => {
     const imgComponents = [
         {
             img: home1,
@@ -193,9 +193,16 @@ const HomeMain = () => {
 
             <div className="home-main__img-list">
                 {
-                    imgComponents.map(compo => <ImgCompo {...compo}/>)
+                    imgComponents.map(compo => 
+                        <div className="home-main__img--item" onClick={() => {
+                            props.setModalOpen(true)
+                        }}>
+                            <ImgCompo {...compo}/>
+                        </div>
+                        )
                 }
             </div>
+            <button>Open</button>
         </div>
     );
 }

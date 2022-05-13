@@ -2,31 +2,32 @@
 
 .btn {
     padding: 13px 40px 13px 38px;   
-    background-color: #070707;
+    background-color: $black-color;
     min-width: 142px;
     max-width: max-content;
-    color: #fff;
+    color: $white-color;
     transition: all .2s linear;
+    border: 1px solid $black-color;
     &:hover {
         cursor: pointer;
-        color: #070707;
-        background-color: #fff;
-        border: 1px solid #070707;
+        color: $black-color;
+        background-color: $white-color;
+        border: 1px solid $black-color;
     }
     &-trans {
         transition: all .2s linear;
         padding: 13px 40px 13px 38px;   
         min-width: 142px;
         max-width: max-content;
-        color: #070707;
-        background-color: #fff;
-        border: 1px solid #070707;
+        color: $black-color;
+        background-color: $white-color;
+        border: 1px solid $black-color;
         transition: all .2s linear;
         &:hover {
             cursor: pointer;
-            color: #fff;
-            background-color: #070707;
-            border: 1px solid #070707;
+            color: $white-color;
+            background-color: $black-color;
+            border: 1px solid $black-color;
         }
         &.width-100 {
             width: 100%;

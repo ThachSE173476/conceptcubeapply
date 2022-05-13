@@ -18,11 +18,11 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        background-color: rgba($color: #000000, $alpha: .5);
+        background-color: rgba($color: $black-color, $alpha: .8);
     }
 
     &-main {
-        background-color: #fff;
+        background-color: $white-color;
         width: 80%;
         margin: 0 auto;
         z-index: 100;
@@ -31,7 +31,7 @@
     }
 
     &-header {
-        border-bottom: 1px solid #efefef;
+        border-bottom: 1px solid $light-grey-color;
         display: block;
         width: 100%;
         display: flex;
@@ -58,7 +58,7 @@
                     font-weight: 300;
                     margin: 10px 0 20px;
                     span {
-                        color: #8c8c8c;
+                        color: $grey-color-4;
                     }
                 }
             }
@@ -91,7 +91,7 @@
                 }
             }
             &--btn {
-                color: #fff;
+                color: $white-color;
                 img {
                     width: 74px;
                     height: 74px;
@@ -118,7 +118,7 @@
             line-height: 1.71;
             letter-spacing: normal;
             text-align: left;
-            color: #070707;
+            color: $black-color;
             margin-bottom: 100px;
         }
         &__list {
@@ -126,7 +126,7 @@
             display: flex;
             flex-direction: column;
             gap: 70px;
-            border-bottom: 1px solid #efefef;
+            border-bottom: 1px solid $light-grey-color;
             li {
                 img {
                     width: 100%;
@@ -173,7 +173,7 @@
 
     &-banner {
         // width: 100%;
-        background-color: #efefef;
+        background-color: $light-grey-color;
         padding: 50px 60px;
         overflow: hidden;
         &__user {
@@ -211,7 +211,7 @@
         width: 100%;
         &-right{
             max-width: 1100px;
-            border-right: 1px solid #efefef;
+            border-right: 1px solid $light-grey-color;
             padding: 50px 60px;
             h1 {
                 font-size: 20px;
@@ -223,14 +223,14 @@
                 input {
                     flex: 1;
                     padding: 15px;
-                    border: solid 1px #070707;
-                    background-color: #fff;
+                    border: solid 1px $black-color;
+                    background-color: $white-color;
                 }
                 button {
                     width: 70px;
                     height: inherit;
-                    background-color: #070707;
-                    color: #fff;
+                    background-color: $black-color;
+                    color: $white-color;
                     transform: translateX(-2px);
                     i {
                         font-size: 18px;
@@ -272,12 +272,12 @@
         &-left {
             flex: 1;
             &__item {
-                border-top: 1px solid #efefef;
+                border-top: 1px solid $light-grey-color;
                 padding: 50px 50px 40px;
                 h5 {
                     font-size: 12px;
                     font-weight: 300;
-                    color: #8c8c8c;
+                    color: $grey-color-4;
                 }
                 h2 {
                     font-style: 16px;
@@ -304,7 +304,7 @@
                         display: inline;
                         font-size: 12px;
                         font-weight: 300;
-                        color: #8c8c8c;
+                        color: $grey-color-4;
                         img{
                             width: 12px;
                             height: 12px;
@@ -341,8 +341,8 @@
                         font-size: 14px;
                         font-weight: 500;
                         padding: 9px 10px 8px;
-                        border: solid 1px #ff2e43;
-                        color: #ff2e43;
+                        border: solid 1px $red-color;
+                        color: $red-color;
                     }
                 }
             }
@@ -357,7 +357,7 @@
         cursor: pointer;
         i {
             font-size: 24px;
-            color: #fff;
+            color: $white-color;
         }
     }
 
@@ -369,12 +369,12 @@
         &-item {
             width: 70px;
             height: 70px;
-            background-color: #fff;
+            background-color: $white-color;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            border: 1px solid #070707;
+            border: 1px solid $black-color;
             i {
                 font-size: 16px;
             }
@@ -393,5 +393,93 @@
         z-index: 100;
         display: flex;
         gap: 10px;
+    }
+
+    &.d-none {
+        display: none;
+    }
+}
+@media (max-width:1140px) {
+    .modal {
+        &-header {
+            flex-direction: column;
+            align-items: flex-start;
+            &__wrap {
+                flex-direction: column;
+            }
+            &__footer {
+                h1 {
+                    text-align: center;
+                }
+            }
+        }
+        &-images {
+            &__list {
+                padding: 0 20px 50px;
+            }
+        }
+        &-banner {
+            width: auto;
+            flex-wrap: wrap;
+        }
+        &-comment {
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width:650px) {
+    .modal {
+        &-header {
+            &__wrap {
+                &--btns {
+                    flex-direction: column;
+                }
+            }
+        }
+        &-images {
+            padding: 0 20px;
+            &__main {
+                &--btn {
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                    &-prev {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: -84px;
+                    }
+                    &-next {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: -84px;
+                    }
+                }
+                &--play {
+                    width: 20%;
+                }
+            }
+            &__footer {
+                &--btns {
+                    flex-direction: column;
+                }
+            }
+            &__list {
+                padding: 0 30px 20px;
+            }
+        }
+        &-comment{
+            &-right {
+                padding: 20px 25px;
+            }
+            &-left {
+                &__item {
+                    padding: 30px 30px 20px;
+                }
+            }
+        }
     }
 }
